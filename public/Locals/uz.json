@@ -1,0 +1,26 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "watches": "Watches",
+    "sale": "Sale",
+    "blog": "Blog",
+    "cart": "Cart",
+    "shops": "Shops",
+    "silgle": "Single Post",
+    "silgleProduct": "Single Product",
+    "contact": "Contact",
+    "check": "Checkout",
+    "accaunt": "My Account",
+    "headerSearch": "Search..."
+  },
+  "hero": {
+    "titles": [
+      "Sizning MAHSULOTLARINGIZ A’LO DARJADA",
+      "Eng yangi mahsulotlar siz uchun",
+      "Chegirmalar va aksiyalarni qo‘ldan boy bermang"
+    ],
+    "button": "MAHSULOTLARNI KO‘RISH"
+}
+}

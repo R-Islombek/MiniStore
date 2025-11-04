@@ -1,0 +1,26 @@
+{
+    "header": {
+        "home": "Bosh sahifa",
+        "services": "Xizmatlar",
+        "products": "Mahsulotlar",
+        "watches": "Soatlar",
+        "sale": "Chegirmalar",
+        "blog": "Blog",
+        "cart": "Savat",
+        "shops": "Do‘konlar",
+        "silgle": "Bitta post",
+        "silgleProduct": "Bitta mahsulot",
+        "contact": "Aloqa",
+        "check": "To‘lov sahifasi",
+        "accaunt": "Mening hisobim",
+        "headerSearch": "Qidirish..."
+    },
+    "hero": {
+        "titles": [
+            "Your PRODUCTS ARE GREAT",
+            "Check out our latest products",
+            "Don’t miss discounts and deals"
+        ],
+        "button": "SHOP PRODUCT"
+    }
+}
