@@ -1,14 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUser, FaShoppingCart, FaSearch, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import Logo from "../Header/images/logo.png";
 import "./Header.css";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef(null);
 
   const changeLanguage = (e) => {
@@ -28,13 +31,32 @@ const Header = () => {
     };
   }, []);
 
-  
+  const handleSearch = (e) => {
+    if (e.key === 'Enter' && searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery("");
+    }
+  };
+
+  // Asosiy navigatsiya linklari
+  const navItems = [
+    { id: "home", label: t("header.home"), path: "/" },
+    { id: "about", label: t("header.services"), path: "/about" },
+    { id: "products", label: t("header.products"), path: "/products" },
+    { id: "watches", label: t("header.watches"), path: "/watches" },
+    { id: "sale", label: t("header.sale"), path: "/sale" }
+  ];
+
+  // Dropdown menyusi uchun linklar
   const dropdownItems = [
-    { id: "cart", label: t("header.cart") },
-    { id: "shops", label: t("header.shops") },
-    { id: "single", label: t("header.single") },
-    { id: "singleProduct", label: t("header.singleProduct") },
-    { id: "contact", label: t("header.contact") }
+    { id: "cart", label: t("header.cart"), path: "/card" },
+    { id: "shops", label: t("header.shops"), path: "/shops" },
+    { id: "single", label: t("header.silgle"), path: "/post/1" },
+    { id: "singleProduct", label: t("header.silgleProduct"), path: "/product/1" },
+    { id: "contact", label: t("header.contact"), path: "/contact" },
+    { id: "check", label: t("header.check"), path: "/check" },
+    { id: "account", label: t("header.accaunt"), path: "/account" },
+    { id: "blog", label: t("header.blog"), path: "/blog" }
   ];
 
   return (
@@ -42,27 +64,35 @@ const Header = () => {
       <div className="container">
         <div className="header__container">
           {/* Logo */}
-          <a href="#" className="header__logo">
+          <Link to="/" className="header__logo">
             <img src={Logo} alt="logo" />
-          </a>
+          </Link>
 
           <nav className={`header__nav ${isMenuOpen ? "active" : ""}`}>
             <ul className="header__list">
-              <li className="header__item"><a href="#home" className="nav__link">{t("header.home")}</a></li>
-              <li className="header__item"><a href="#services" className="nav__link">{t("header.services")}</a></li>
-              <li className="header__item"><a href="#products" className="nav__link">{t("header.products")}</a></li>
-              <li className="header__item"><a href="#watches" className="nav__link">{t("header.watches")}</a></li>
-              <li className="header__item"><a href="#sale" className="nav__link">{t("header.sale")}</a></li>
+              {/* Asosiy navigatsiya linklari */}
+              {navItems.map((item) => (
+                <li key={item.id} className="header__item">
+                  <Link 
+                    to={item.path} 
+                    className="nav__link" 
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
 
+              {/* Dropdown menyu */}
               <li
                 className="header__item dropdown"
                 ref={dropdownRef}
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
-                <a href="#blog" className="nav__link dropdown__toggle">
+                <span className="nav__link dropdown__toggle">
                   {t("header.blog")} <FaChevronDown className="dropdown__arrow" />
-                </a>
+                </span>
                 <div className={`dropdown__menu ${dropdownOpen ? "active" : ""}`}>
                   {dropdownItems.map((item) => (
                     <div 
@@ -71,7 +101,16 @@ const Header = () => {
                       onMouseEnter={() => setActiveDropdown(item.id)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <a href={`#${item.id}`} className="dropdown__link">{item.label}</a>
+                      <Link 
+                        to={item.path} 
+                        className="dropdown__link"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setDropdownOpen(false);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -80,29 +119,45 @@ const Header = () => {
           </nav>
 
           <div className="header__icons">
-            <div className="icon-wrapper">
-              <FaSearch className="icon" />
-              <span className="icon-tooltip">{t("header.search")}</span>
+            {/* Search Input */}
+            <div className="search-wrapper">
+              <FaSearch className="search-icon" />
+              <input
+                type="text"
+                placeholder={t("header.headerSearch")}
+                className="search-input"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleSearch}
+              />
             </div>
+
+            {/* Account */}
             <div className="icon-wrapper">
-              <FaUser className="icon" />
-              <span className="icon-tooltip">{t("header.account")}</span>
+              <Link to="/account">
+                <FaUser className="icon" />
+                <span className="icon-tooltip">{t("header.accaunt")}</span>
+              </Link>
             </div>
+
+            {/* Cart */}
             <div className="icon-wrapper cart-icon">
-              <FaShoppingCart className="icon" />
-              <span className="icon-tooltip">{t("header.cart")}</span>
+              <Link to="/card">
+                <FaShoppingCart className="icon" />
+                <span className="icon-tooltip">{t("header.cart")}</span>
+              </Link>
             </div>
 
-
+            {/* Language Selector */}
             <div className="lang-selector">
-              <select className="lang-select" onChange={changeLanguage}>
+              <select className="lang-select" onChange={changeLanguage} defaultValue={i18n.language}>
                 <option value="uz">UZ</option>
                 <option value="ru">RU</option>
                 <option value="en">EN</option>
               </select>
             </div>
 
-            {/* Burger menu */}
+      
             <div className="burger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </div>
@@ -110,7 +165,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Overlay */}
       {isMenuOpen && <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>}
     </header>
   );

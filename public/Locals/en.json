@@ -27,11 +27,42 @@
         "title": "Free delivery",
         "title1": "Quality guarantee",
         "title2": "Daily offers",
-        "title3":"100% secure payment",
+        "title3": "100% secure payment",
         "text": "Consectetur adipi elit lorem ipsum dolor sit amet.",
-        "text1":"Consectetur adipi elit lorem ipsum dolor sit amet.",
+        "text1": "Consectetur adipi elit lorem ipsum dolor sit amet.",
         "text2": "Dolor sit amet orem ipsu mcons ectetur adipi elit.",
         "text3": "Amet consectetur adipi elit loreme ipsum dolor sit.",
         "text4": "Rem Lopsum dolor sit amet, consectetur adipi elit."
-    }
+    },
+    "phone": {
+        "title": "Smartphones",
+        "title1": "Smart Watches",
+        "text1": "iPhone 15 Pro Max",
+        "text2": "Samsung Galaxy S24",
+        "text3": "Google Pixel 8 Pro",
+        "text4": "Xiaomi 14 Ultra"
+    },
+    "watch": {
+        "text1": "Apple Watch Series 9",
+        "text2": "Samsung Galaxy Watch 6",
+        "text3": "Garmin Fenix 7",
+        "text4": "Fitbit Versa 4"
+    },
+    "buttons": {
+        "addToCart": "Add to Cart",
+        "view": "View",
+        "wishlist": "Wishlist"
+    },
+      "cart": {
+    "title": "Cart",
+    "empty": "Cart is empty",
+    "emptyText": "There are no items in your cart yet",
+    "continueShopping": "Continue Shopping",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to Checkout"
+  }
 }

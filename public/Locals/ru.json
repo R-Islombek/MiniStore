@@ -33,5 +33,36 @@
         "text2": "Долор сит амет, лорем ипсум консектетур адипи элит.",
         "text3": "Амет консектетур адипи элит, лорем ипсум долор сит.",
         "text4": "Рем лопсум долор сит амет, консектетур адипи элит."
-    }
+    },
+     "phone": {
+    "title": "Смартфоны",
+    "title1": "Умные часы",
+    "text1": "iPhone 15 Pro Max",
+    "text2": "Samsung Galaxy S24",
+    "text3": "Google Pixel 8 Pro",
+    "text4": "Xiaomi 14 Ultra"
+  },
+  "watch": {
+    "text1": "Apple Watch Series 9",
+    "text2": "Samsung Galaxy Watch 6",
+    "text3": "Garmin Fenix 7",
+    "text4": "Fitbit Versa 4"
+  },
+  "buttons": {
+    "addToCart": "Сохранить",
+    "view": "Посмотреть",
+    "wishlist": "Избранное"
+  },
+  "cart": {
+    "title": "Корзина",
+    "empty": "Корзина пуста",
+    "emptyText": "В вашей корзине пока нет товаров",
+    "continueShopping": "Продолжить покупки",
+    "orderSummary": "Сводка заказа",
+    "subtotal": "Подытог",
+    "shipping": "Доставка",
+    "free": "Бесплатно",
+    "total": "Общая сумма",
+    "proceedToCheckout": "Перейти к оплате"
+  }
 }
