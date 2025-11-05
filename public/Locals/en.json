@@ -22,5 +22,16 @@
             "Don’t miss discounts and deals"
         ],
         "button": "SHOP PRODUCT"
+    },
+    "deliver": {
+        "title": "Free delivery",
+        "title1": "Quality guarantee",
+        "title2": "Daily offers",
+        "title3":"100% secure payment",
+        "text": "Consectetur adipi elit lorem ipsum dolor sit amet.",
+        "text1":"Consectetur adipi elit lorem ipsum dolor sit amet.",
+        "text2": "Dolor sit amet orem ipsu mcons ectetur adipi elit.",
+        "text3": "Amet consectetur adipi elit loreme ipsum dolor sit.",
+        "text4": "Rem Lopsum dolor sit amet, consectetur adipi elit."
     }
 }

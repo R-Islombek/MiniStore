@@ -7,7 +7,7 @@ const Deliver = () => {
                <div className='deliver__container'>
                      <ul className='deliver__list'>
                         <li className='deliver__item'>
-                            
+                             
                         </li>
                      </ul>
                </div>

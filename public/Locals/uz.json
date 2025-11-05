@@ -22,5 +22,16 @@
       "Chegirmalar va aksiyalarni qo‘ldan boy bermang"
     ],
     "button": "MAHSULOTLARNI KO‘RISH"
-}
+  },
+   "deliver": {
+    "title": "Bepul yetkazib berish",
+    "title1": "Sifat kafolati",
+    "title2": "Har kungi takliflar",
+    "title3": "100% xavfsiz to‘lov",
+    "text": "Biz sizga eng sifatli xizmatni taqdim etamiz.",
+    "text1": "Har bir buyurtma e’tibor bilan yetkaziladi.",
+    "text2": "Har kuni yangi chegirmalar va takliflar mavjud.",
+    "text3": "To‘lov tizimlarimiz to‘liq xavfsiz va ishonchli.",
+    "text4": "Biz mijozlarimizdan mamnunmiz va doimo yordam beramiz."
+  }
 }
