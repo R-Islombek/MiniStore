@@ -53,16 +53,41 @@
         "view": "View",
         "wishlist": "Wishlist"
     },
-      "cart": {
-    "title": "Cart",
-    "empty": "Cart is empty",
-    "emptyText": "There are no items in your cart yet",
-    "continueShopping": "Continue Shopping",
-    "orderSummary": "Order Summary",
-    "subtotal": "Subtotal",
-    "shipping": "Shipping",
-    "free": "Free",
-    "total": "Total",
-    "proceedToCheckout": "Proceed to Checkout"
-  }
+    "cart": {
+        "title": "Shopping Cart",
+        "empty": "Your cart is empty",
+        "emptyText": "You haven't added any products to your cart yet",
+        "continueShopping": "Continue Shopping",
+        "orderSummary": "Order Summary",
+        "product": "Product",
+        "quantity": "Quantity",
+        "total": "Total",
+        "action": "Action",
+        "remove": "Remove",
+        "increase": "Increase",
+        "decrease": "Decrease",
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "free": "Free",
+        "discount": "Discount",
+        "grandTotal": "Grand Total",
+        "proceedToCheckout": "Proceed to Checkout",
+        "freeShipping": "Free Shipping",
+        "returnPolicy": "30-Day Return",
+        "securePayment": "Secure Payment",
+        "itemsCount": "{{count}} items"
+    },
+    "sale": {
+        "title": "10% off",
+        "text": "New year sale",
+        "button": "Shop Sale"
+    },
+    "latest": {
+        "title": "feb 22, 2023 - Gadgets",
+        "title1": "feb 25, 2023 - Technology",
+        "title2": "feb 22, 2023 - Camera",
+        "text": "Get some cool gadgets in 2023",
+        "text1": "Technology Hack You Won't Get",
+        "text2": "Top 10 Small Camera In The World"
+    }
 }

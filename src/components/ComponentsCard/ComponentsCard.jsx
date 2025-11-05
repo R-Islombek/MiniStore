@@ -55,7 +55,7 @@ const ComponentsCard = () => {
   // Soatlar ma'lumotlari
   const watches = [
     {
-      id: 1,
+      id: 5,
       image: watch1,
       title: t("watch.text1"),
       price: "$299",
@@ -64,7 +64,7 @@ const ComponentsCard = () => {
       type: "Smart Watch"
     },
     {
-      id: 2,
+      id: 6,
       image: watch2,
       title: t("watch.text2"),
       price: "$450",
@@ -73,7 +73,7 @@ const ComponentsCard = () => {
       type: "Luxury Watch"
     },
     {
-      id: 3,
+      id: 7,
       image: watch3,
       title: t("watch.text3"),
       price: "$199",
@@ -82,7 +82,7 @@ const ComponentsCard = () => {
       type: "Sport Watch"
     },
     {
-      id: 4,
+      id: 8,
       image: watch4,
       title: t("watch.text4"),
       price: "$350",
@@ -115,9 +115,35 @@ const ComponentsCard = () => {
 
   // Savatga qo'shish
   const addToCart = (product) => {
-    // Bu yerda savatga qo'shish logikasi bo'ladi
-    console.log("Savatga qo'shildi:", product);
-    // Keyin savat sahifasiga o'tish
+    // Mavjud savatni o'qish
+    const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    
+    // Mahsulot allaqachon savatda bormi?
+    const existingItem = existingCart.find(item => item.id === product.id);
+    
+    let updatedCart;
+    if (existingItem) {
+      // Agar mavjud bo'lsa, miqdorni oshirish
+      updatedCart = existingCart.map(item =>
+        item.id === product.id 
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      // Yangi mahsulot qo'shish
+      updatedCart = [...existingCart, {
+        ...product,
+        quantity: 1
+      }];
+    }
+    
+    // Yangilangan savatni saqlash
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    
+    // Foydalanuvchiga xabar berish
+    alert(`${product.title} savatga qo'shildi!`);
+    
+    // Savat sahifasiga o'tish
     navigate('/card');
   };
 

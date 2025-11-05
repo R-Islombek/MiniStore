@@ -1,0 +1,37 @@
+import React from 'react';
+import blooth from "../Latest/images/blooth.jpg";
+import dend from "../Latest/images/dend.jpg";
+import sambufer from "../Latest/images/sambufer.jpg";
+import "./latest.css";
+import { useTranslation } from "react-i18next";
+
+const Latest = () => {
+    const { t } = useTranslation();
+    return (
+        <div className='Latest'>
+            <div className='container'>
+                <div className='latest__content'>
+                    <ul className='latest__list'>
+                        <li>
+                            <img src={blooth} alt="Blooth" />
+                            <h4 className='latest__title'>{t("latest.title")}</h4>
+                            <p className='latest__text'>{t("latest.text")}</p>
+                        </li>
+                        <li>
+                            <img src={dend} alt="Dend" />
+                            <h4 className='latest__title'>{t("latest.title1")}</h4>
+                            <p className='latest__text'>{t("latest.text1")}</p>
+                        </li>
+                        <li>
+                            <img src={sambufer} alt="Sambufer" />
+                            <h4 className='latest__title'>{t("latest.title2")}</h4>
+                            <p className='latest__text'>{t("latest.text2")}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Latest
