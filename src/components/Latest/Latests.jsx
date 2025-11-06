@@ -2,10 +2,10 @@ import React from 'react';
 import blooth from "../Latest/images/blooth.jpg";
 import dend from "../Latest/images/dend.jpg";
 import sambufer from "../Latest/images/sambufer.jpg";
-import "./latest.css";
+import "./LatestStyle.css";
 import { useTranslation } from "react-i18next";
 
-const Latest = () => {
+const Latests = () => {
     const { t } = useTranslation();
     return (
         <div className='Latest'>
@@ -13,7 +13,7 @@ const Latest = () => {
                 <div className='latest__content'>
                     <h4 className='latest__heading'>{t("latest.heading")}</h4>
                     <ul className='latest__list'>
-                        <li>
+                        <li className='latest__item'>
                             <img src={blooth} alt="Blooth" />
                             <h4 className='latest__title'>{t("latest.title")}</h4>
                             <p className='latest__text'>{t("latest.text")}</p>
@@ -35,4 +35,4 @@ const Latest = () => {
     )
 }
 
-export default Latest
+export default Latests

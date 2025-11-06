@@ -20,6 +20,11 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
 }
+html,
+body {
+    height: 100%;
+    overflow-y: hidden;
+}
 
 .header {
   width: 100%;
@@ -164,7 +169,6 @@
   border-left-color: var(--primary-color);
 }
 
-/* Icons va tooltip */
 .header__icons {
   display: flex;
   align-items: center;
@@ -232,9 +236,6 @@
 }
 
 
-/* Cart badge olib tashlandi */
-
-/* Language selector */
 .lang-selector {
   position: relative;
 }
@@ -266,7 +267,6 @@
   box-shadow: 0 0 0 2px rgba(58, 88, 120, 0.2);
 }
 
-/* Burger menu */
 .burger {
   display: none;
   font-size: 22px;
@@ -291,7 +291,6 @@
   z-index: 999;
   display: none;
 }
-/* Add these styles to your existing Header.css */
 
 .search-wrapper {
   position: relative;
@@ -319,15 +318,12 @@
   color: #666;
 }
 
-/* Update icon wrapper styles for better alignment */
 .icon-wrapper a {
   display: flex;
   align-items: center;
   color: inherit;
   text-decoration: none;
 }
-
-/* Mobile responsive */
 @media (max-width: 768px) {
   .search-input {
     width: 150px;
@@ -338,7 +334,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .header__nav {
     position: fixed;

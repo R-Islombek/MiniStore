@@ -2,7 +2,7 @@ import Hero from '../../components/Hero/Hero';
 import Deliver from '../../components/Deliver/Deliver';
 import ComponentsCard from "../../components/ComponentsCard/ComponentsCard";
 import Sales from '../../components/Sales/Sales';
-import Latest from '../../components/Latest/Latest';
+import Latest from '../../components/Latest/Latests';
 import Slider from '../../components/Slider/Slider';
 
 const Home = () => {
