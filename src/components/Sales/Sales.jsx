@@ -7,9 +7,8 @@ const Sales = () => {
   const { t } = useTranslation();
 
   const handleButtonClick = () => {
-    // Sotuvga yo'naltirish logikasi
     console.log("Sotuv boshlanishi");
-    // window.location.href = "/shop" yoki boshqa navigation
+   
   };
 
   return (

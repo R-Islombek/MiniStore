@@ -3,6 +3,8 @@ import Deliver from '../../components/Deliver/Deliver';
 import ComponentsCard from "../../components/ComponentsCard/ComponentsCard";
 import Sales from '../../components/Sales/Sales';
 import Latest from '../../components/Latest/Latest';
+import Slider from '../../components/Slider/Slider';
+
 const Home = () => {
     return (
         <div>
@@ -11,6 +13,7 @@ const Home = () => {
             <ComponentsCard />
             <Sales />
             <Latest />  
+            <Slider />
         </div>
     )
 }

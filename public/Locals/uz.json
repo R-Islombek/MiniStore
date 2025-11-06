@@ -83,11 +83,20 @@
     "button": "Aksiyali Mahsulotlar"
   },
   "latest": {
+    "heading": "So‘nggi postlar",
     "title": "2023-yil 22-fevral - Gadjetlar",
     "title1": "2023-yil 25-fevral - Texnologiya",
     "title2": "2023-yil 22-fevral - Kamera",
     "text": "2023-yilda eng zo‘r gadjetlarni oling",
     "text1": "Siz bilmagan texnologik hiyla",
     "text2": "Dunyoning eng yaxshi 10 ta kichik kamerasi"
+  },
+  "slider": {
+    "title1": "Ajoyib Mahsulot",
+    "title2": "Zo'r Tajriba",
+    "title3": "Mukammal Qo'llab-quvvatlash",
+    "text1": "Bu mahsulot mening kutganimdan ham ajoyib bo'ldi. Sifat va ishlash juda yuqori darajada.",
+    "text2": "Xizmat sifatidan juda mamnunman. Tez va samarali yechimlar taqdim etishdi.",
+    "text3": "Mijozlar qo'llab-quvvatlash jamoasi ajoyib ish qilmokda. Har qanday muammoni tez hal qilishdi."
   }
 }

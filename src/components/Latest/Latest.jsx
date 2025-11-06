@@ -11,6 +11,7 @@ const Latest = () => {
         <div className='Latest'>
             <div className='container'>
                 <div className='latest__content'>
+                    <h4 className='latest__heading'>{t("latest.heading")}</h4>
                     <ul className='latest__list'>
                         <li>
                             <img src={blooth} alt="Blooth" />

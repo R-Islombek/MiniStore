@@ -83,11 +83,20 @@
         "button": "Shop Sale"
     },
     "latest": {
+        "heading": "Latest Posts",
         "title": "feb 22, 2023 - Gadgets",
         "title1": "feb 25, 2023 - Technology",
         "title2": "feb 22, 2023 - Camera",
         "text": "Get some cool gadgets in 2023",
         "text1": "Technology Hack You Won't Get",
         "text2": "Top 10 Small Camera In The World"
+    },
+    "slider": {
+        "title1": "Amazing Product",
+        "title2": "Great Experience",
+        "title3": "Perfect Support",
+        "text1": "This product exceeded my expectations. The quality and performance are top-notch.",
+        "text2": "I’m very satisfied with the service quality. They provide fast and efficient solutions.",
+        "text3": "The customer support team is doing an excellent job. They solved every issue quickly."
     }
 }
